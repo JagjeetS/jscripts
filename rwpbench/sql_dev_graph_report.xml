@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+<display id="2302cb51-0142-1000-8001-7f0001015dd6" type="" style="Chart" enable="true">
+	<name><![CDATA[response_times]]></name>
+	<description><![CDATA[]]></description>
+	<tooltip><![CDATA[]]></tooltip>
+	<drillclass><![CDATA[]]></drillclass>
+	<CustomValues>
+		<LEGEND_LOCATION>AUTOMATIC</LEGEND_LOCATION>
+		<PLOT_HGRID_WIDTH>THINNER</PLOT_HGRID_WIDTH>
+		<DATA_MAP_SERIES>\,"QUERY_NAME",</DATA_MAP_SERIES>
+		<Y2AXIS_SCALE_MAXIMUM>80.0</Y2AXIS_SCALE_MAXIMUM>
+		<Y1AXIS_SCALE_INCREMENT>10.0</Y1AXIS_SCALE_INCREMENT>
+		<Y2AXIS_LOGARITHMIC_BASE>BASE_10</Y2AXIS_LOGARITHMIC_BASE>
+		<Y2AXIS_TITLE_ALIGNMENT>CENTER</Y2AXIS_TITLE_ALIGNMENT>
+		<Y2AXIS_SCALE_MINIMUM>10.0</Y2AXIS_SCALE_MINIMUM>
+		<DATA_MAP_COLNAMES>\,"AVG_ELAPSED","ELAPSED_T","QUERY_NAME","TIME_ST"</DATA_MAP_COLNAMES>
+		<TITLE_ALIGNMENT>LEFT</TITLE_ALIGNMENT>
+		<SUBTITLE_ALIGNMENT>LEFT</SUBTITLE_ALIGNMENT>
+		<Y1AXIS_LINE_WIDTH>THINNEST</Y1AXIS_LINE_WIDTH>
+		<GRID_WIDTH>THINNER</GRID_WIDTH>
+		<TYPE>LINE_VERT_ABS</TYPE>
+		<LEGEND_ALIGNMENT>LEFT</LEGEND_ALIGNMENT>
+		<DATA_MAP_VALUES>\,"AVG_ELAPSED",</DATA_MAP_VALUES>
+		<DATA_MAP_COUNT>2</DATA_MAP_COUNT>
+		<FOOTNOTE_ALIGNMENT>LEFT</FOOTNOTE_ALIGNMENT>
+		<Y2AXIS_LINE_WIDTH>THINNEST</Y2AXIS_LINE_WIDTH>
+		<Y1AXIS_LOGARITHMIC_BASE>BASE_10</Y1AXIS_LOGARITHMIC_BASE>
+		<XAXIS_TICK_LABEL_ROTATE>HORIZONTAL</XAXIS_TICK_LABEL_ROTATE>
+		<Y1AXIS_TICK_LABEL_ROTATE>HORIZONTAL</Y1AXIS_TICK_LABEL_ROTATE>
+		<STYLE>Default</STYLE>
+		<XAXIS_TICK_LABEL_SKIP_MODE>AUTOMATIC</XAXIS_TICK_LABEL_SKIP_MODE>
+		<Y1AXIS_TITLE_ALIGNMENT>CENTER</Y1AXIS_TITLE_ALIGNMENT>
+		<PLOT_VGRID_WIDTH>THINNER</PLOT_VGRID_WIDTH>
+		<Y1AXIS_SCALE_MAXIMUM>80.0</Y1AXIS_SCALE_MAXIMUM>
+		<Y2AXIS_SCALE_INCREMENT>20.0</Y2AXIS_SCALE_INCREMENT>
+		<Y2AXIS_TICK_LABEL_ROTATE>HORIZONTAL</Y2AXIS_TICK_LABEL_ROTATE>
+		<XAXIS_TITLE_ALIGNMENT>CENTER</XAXIS_TITLE_ALIGNMENT>
+		<XAXIS_LINE_WIDTH>THINNEST</XAXIS_LINE_WIDTH>
+		<DATA_MAP_COLUMNS>\,"TIME_ST",</DATA_MAP_COLUMNS>
+	</CustomValues>
+	<query>
+		<sql><![CDATA[select distinct 
+query_name,to_char(time_st, 'hh24:mi:ss') time_st,avg_elapsed
+from (select trim(substr(query_name,1,3)) query_name,elapsed_t,time_st, trunc(avg(elapsed_t) over (partition by trim(substr(query_name,1,3)) order by time_st
+rows between 5 preceding and 5 following)) avg_elapsed
+from response_times
+where trial_nbr=(select max(trial_nbr) from runs_desc)
+and systimestamp-time_st>numtodsinterval(to_number(replace(dbtimezone,':','.'))*3600+3600,'second')
+--to_timestamp('29/10/2013 04:42:47','dd/mm/yyyy hh24:mi:ss')-numtodsinterval(10,'second')
+order by time_st desc
+)
+where rownum<1000]]></sql>
+	</query>
+		<pdf version="VERSION_1_7" compression="CONTENT">
+			<docproperty title="null" author="null" subject="null" keywords="null" />
+			<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+			<column>
+				<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+				<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+				<blob blob="NONE" zip="false" />
+			</column>
+			<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+			<header enable="false" generatedate="false">
+				<data>
+				
+					null									</data>
+			</header>
+			<footer enable="false" generatedate="false">
+				<data value="null" />
+			</footer>
+			<security enable="false" useopenpassword="false" openpassword="null" encryption="EXCLUDE_METADATA">
+				<permission enable="false" permissionpassword="null" allowcopying="true" allowprinting="true" allowupdating="false" allowaccessdevices="false" />
+			</security>
+			<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+		</pdf>
+</display>
+</displays>

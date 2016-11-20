@@ -1,0 +1,1424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0101)http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2cpattern -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="./RWPBench_RealWorld_TWiki_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="./RWPBench_RealWorld_TWiki_files/jquery-all.css" type="text/css" media="all">
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/jquery-all.js"></script><style type="text/css"></style>
+<title> RWPBench &lt; RealWorld &lt; TWiki</title>
+
+<link rel="icon" href="http://realworld.us.oracle.com/twiki/pub/RealWorld/WebPreferences/favicon.ico" type="image/x-icon">
+<link rel="alternate" href="http://realworld.us.oracle.com/twiki/bin/edit/RealWorld/RWPBench?_T=14%20Aug%202014" type="application/x-wiki" title="edit RWPBench">
+<link rel="shortcut icon" href="http://realworld.us.oracle.com/twiki/pub/RealWorld/WebPreferences/favicon.ico" type="image/x-icon">
+<meta name="SCRIPTURLPATH" content="/twiki/bin">
+<meta name="SCRIPTSUFFIX" content="">
+<meta name="TEXT_JUMP" content="Jump">
+<meta name="TEXT_SEARCH" content="Search">
+<meta name="TEXT_NUM_TOPICS" content="Number of topics:">
+<meta name="TEXT_MODIFY_SEARCH" content="Modify search">
+<meta name="robots" content="noindex"><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/WebRss">
+<!--<base href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench">--><base href=".">
+<!--BEHAVIOURCONTRIB--><script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/behaviour.compressed.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twikilib.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twikiWindow.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twikiEvent.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twikiHTML.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twikiCSS.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twikiForm.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/pattern.js"></script>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/TWikiTemplates/base.css');
+</style>
+<style type="text/css" media="all">
+
+
+</style>
+<style type="text/css" media="all">
+@import url('/twiki/pub/TWiki/PatternSkin/layout.css');
+@import url('/twiki/pub/TWiki/PatternSkin/style.css');
+@import url('/twiki/pub/TWiki/PatternSkin/colors.css');
+</style>
+<style type="text/css" media="all">
+	/* Styles that are set using variables */
+	.patternBookView .twikiTopRow,
+	.patternWebIndicator a img,
+	.patternWebIndicator a:hover img {
+		background-color:#D0D0D0;
+	}
+	#patternTopBarContents { background-image:url(/twiki/pub/TWiki/PatternSkin/TWiki_header.gif); background-repeat:no-repeat;}
+	
+	.patternBookView {
+		border-color:#D0D0D0;
+	}
+	.patternPreviewPage #patternMain {
+		/* uncomment to set the preview image */
+		/*background-image:url("/twiki/pub/TWiki/PreviewBackground/preview2bg.gif");*/
+	}
+	
+</style><style type="text/css" media="all">
+
+
+
+</style>
+<style type="text/css" media="all">
+	@import url("/twiki/pub/TWiki/PatternSkin/print.css");
+</style>
+<!--[if IE]><style type="text/css" media="screen">
+pre {
+	overflow-x:auto;
+	padding-bottom:expression(this.scrollWidth > this.offsetWidth ? 16 : 0);
+}
+</style>
+<![endif]-->
+<!--[if lte IE 6]> 
+<style type="text/css">
+#patternLeftBar {
+	position:relative; /* IE 5.5 needs this or the contents won't show outside the parent container on print. IE 6.0 needs it only during printable copy! */
+}
+</style><![endif]-->
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twikiStyles.js"></script><style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>
+
+<!--TWISTYPLUGIN_TWISTY--><style type="text/css" media="all">
+@import url("http://realworld.us.oracle.com/twiki/pub/TWiki/TwistyContrib/twist.css");
+</style>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/behaviour.compressed.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twikilib.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twikiPref.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twikiCSS.js"></script>
+<script type="text/javascript" src="./RWPBench_RealWorld_TWiki_files/twist.compressed.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+var styleText = '<style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>';
+document.write(styleText);
+// ]]>
+</script><style type="text/css" media="all">.twikiMakeVisible{display:inline;}.twikiMakeVisibleInline{display:inline;}.twikiMakeVisibleBlock{display:block;}.twikiMakeHidden{display:none;}</style>
+
+<!--TABLEPLUGIN_twikiAttachmentsTable--><style type="text/css" media="all">
+.tableSortIcon img {padding-left:.3em; vertical-align:text-bottom;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable th {vertical-align:middle;}
+.twikiTable#twikiAttachmentsTable td {vertical-align:top;}
+.twikiTable#twikiAttachmentsTable th {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable th.twikiSortedCol {background-color:#eeeeee;}
+.twikiTable#twikiAttachmentsTable th {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:link font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:visited font {color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable th a:hover font {color:#ffffff;background-color:#0066cc;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td {background-color:#ffffff;}
+.twikiTable#twikiAttachmentsTable tr.twikiTableRowdataBg0 td.twikiSortedCol {background-color:#f5f5f5;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol0 {text-align:center;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol1 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol2 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol3 {text-align:right;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol4 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol5 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol6 {text-align:left;}
+.twikiTable#twikiAttachmentsTable td.twikiTableCol7 {text-align:center;}
+</style></head>
+<body class="patternViewPage patternPrintPage">
+<a name="PageTop"></a>
+<div id="patternScreen">
+<div id="patternPageShadow">
+<div id="patternPage">
+<div id="patternOuter">
+<div id="patternFloatWrap">
+<div id="patternMain">
+<div id="patternMainContents">
+<div class="patternContent"><div class="patternTopic"> <h1><a name="The_rwpbench_Tool"></a> The rwpbench Tool </h1>
+<p>
+This is a description of the rwpbench tool. This tool grew out of the oraunloader program used to unload data from Oracle tables, into a versatile tool that can still fill that job, while also offering a customizable tool for POCs. The following sections describe how to use the tool, then there are sections giving several examples. For unloading data, please get the oraunloader tool instead of this one, as it has more options for that purpose.
+</p><p>
+The program will record the performance of each SQL statement it executes, either in the database or in files, or send them to a remote system, via a TCP/IP socket. The data contains at least the query name, the execution time, and the returned row count. These can then be used to assess the performance of each query individually, and evaluate the results of the benchmark. The program also offers several options, like taking AWR snapshots at the start/end of or during the run, and printing the awr reports. It can also export the active sqlmonitor for the queries, print execution plans, pga and session statistics.
+</p><p>
+rwpbench will take it's 'scenario' from the parfile passed as a parameter on the command line. The main process itself never executes any SQL statement included in the POC, it uses forked processes to do so. The awr snapshots and printing awr reports is done by the main process. The forked processes will also do all the specified tasks, like printing session stats, execution plan, sqlmonitor, ... When a process finishes executing a task, it will wait for the next one, until it receives an 'exit' command, then it will just exit. The concurrent number of such processes is governed by a command line parameter' nbr_of_processes' (in previous version, this was specified in the parfile, as the DEGREE parameter). So you'll have at most nbr_of_processes+1 (for the main process) of concurrently running processes. Each process will open a new connection to the database and close it at the end.
+</p><p>
+rwpbench will fork all the processes it asked to use at the start, and then it will distribute the work on them on first-free/first-served basis. These processes can be on different machines. They connect to the database at the first SQL that arrives, and disconnect at the end.
+</p><p>
+The section on the command line parameters explains how to start these processes and how they communicate.
+</p><p>
+</p><h2><a name="Configuration_file"></a> Configuration file </h2>
+<p>
+The program is executed via command line:
+</p><p>
+rwpbench parfile=name_of_parameter_file userid=username/password@service master_ip=ip_of_the_master_system master_port=port_number_to_use number_of_machines=how_many_machine_will_run_rwpbench nbr_of_processes=how_many_user_you_want_to_simulate
+</p><p>
+When running on a single machine, you do not need to specify the ip, port_number or number_of_machines. Note that number_of_machines does not include the current one, so if you have 3 machines in all, you need to specify 2 for this parameter. Here are some examples of how to start the program:
+</p><p>
+on a single machine: rwpbench parfile=nt.par userid=cq/cq@dbm-taf nbr_of_processes=5 This will start a run, with the parfile called 'nt.par', using db alias "dbm-taf", and user "cq/cq". Five users will be simulated, meaning that 5 processes will be forked on the machine, and you'll have 5 working sessions on the database.
+</p><p>
+With 3 machines, on the master you start rwpbench like this: rwpbench parfile=nt.par userid=cq/cq@dbm-taf nbr_of_processes=5 master_ip=10.245.13.125 master_port=2049 number_of_machines=2
+</p><p>
+and then, on each of the 2 other slave machines: rwpbench master_ip=10.245.13.125 master_port=2049
+</p><p>
+What will happen here is that the master system will wait for the 2 other machines to connect to it, opening a socket using the specified ip/port. It will then ask each system to start a number of child processes depending on the nbr_of_processes argument. Once these child processes are started, the main rwpbench on these 2 machines will exit. The forked processes again open a socket to the main program, which will be used to communicate the tasks to do, as well as control messages. Once all the processes are present, the main instance of rwpbench will start reading the parfile, and distribute the work on the child processes on first-idle/first-served basis. When no more work is available, the main process will wait for all the forked ones to signal that they are idle, and then will ask them to quit, before finishing the final tasks, like taking a snapshot, printing the awr reports, ....
+</p><p>
+The program will take it's scenario from the parfile. What you can put there is described below. The userid will be used to connect to the database. If you do not specify a 'service', then the current ORACLE_SID will be used.
+</p><p>
+The output data, if it is printed to a file, will be in a CSV format, where the separator is a ';'.
+</p><p>
+The parameter file can have any of the following parameters, some of them can be specified several times, each time applying from there on. The parameter names are followed by an '=' sign, with <strong>no blanks neither before, nor after it</strong>. The names of the parameters are case-insensitive. A main point is that the parfile is processed sequentially. rwpbench will read it line by line, and a task is processed when a 'sql=' line is found. This means that all the parameters specific to a given sql, e.g. 'bind file', 'file', 'log file', must precede the corresponding 'sql' line in the file: </p><ul>
+<li> query name: allows you to assign a name to the query following this line. This is used to track performance of each query, as the query_name is included in the table that is used to register execution statistics. If the query comes from a file, rwpbench will add the starting line number in the file to the query name you put here. You can also specify 'query name=qb_name'. In this case, and if the queries come from a file, rwpbench will check if there's a hint in the sql of the format 'qb_name(xxxx)'. If it finds one, the string between the '(' and ')' will be taken as the query name and replaces 'qb_name....'. Q_NAME is a supported Oracle hint that is used to identify any SQL or sub-query/in-line view in any statement.
+</li> <li> print plan stats: if Y/y, the program will print to a log file statistics from V$SQL as well as the execution plan (obtained with dbms_sql.display_cursor). A log file must be specified, otherwise this parameter has no effect.
+</li> <li> save mystats: if Y/y, rwpbench will save, in a table called my_stats, the rows from v$mystats that changed between during the execution of the statement.
+</li> <li> sqlmonitor: Use this entry to specify if you want a sqlmonitor report printed for the following query(ies). If you don't want any report, put there 'N'. Otherwise, it can be of the form '[string:]number'. If you specify a string, then it should be the type of report you want. The default is 'ACTIVE'. If the elapsed time of the query is &gt;'number', then the sqlmonitor for this query will be printed. The filename is composed by the query_name_trial_nbr.html. If the 'log file' entry was specified, and it had a directory component, then the sqlmon file will be in that directory, otherwise, it is in your 'current directory'.
+</li> <li> think time min/think time max: wait time range before starting a given SQL, in seconds. The actual wait time is randomly generated between the 2 limits, using a uniform distribution. Although the values are in seconds, they are actually converted to microseonds, and we use 'usleep' instead of sleep, thus you can specify lower than a second limits (e.g. .1 for _min and .2 for _max to get a think time between 100 and 200 milliseconds)
+</li> <li> flush bc: if Y/y do an 'alter system flush buffer_cache' before continuing
+</li> <li> flush sp: if Y/y do an 'alter system flush shared_pool' before before continuing
+</li> <li> debug file name: if you enable debugging, each process will write it's debug messages to the specified file,after adding it'spid and trial_nbr as suffixes
+</li> <li> print my stats: if Y:y then the process will print, in the log file, the non-zero values from v$mystat. This is done before exiting the session.
+</li> <li> print pga stats: ifY/y, the process will print the PGA data from v$process to the log file. This is done after executing any SQL passed to it.
+</li> <li> trial nbr: Helps identify the run, as it will be also in the execution statistics table. if = N/n then the max from that table is taken and incremented
+</li> <li> file: The name of the output file to be used for the SQL that comes after. The file name can contain a %d that will be replaced by a serial number
+</li> <li> log file: the name of the log file, can contain a %d that will be replaced by the process id
+</li> <li> rows to fetch: maximum number of rows to fetch, if not specified all rows, same will be done if 0 (zero) is specified.
+</li> <li> max time: If &gt;0 then the queries following this line will be executed several times, until the indicated value, in seconds, expires.
+</li> <li> exec count: tells the program to execute every sql the specified number of times. if 'max time' is specified, then the 'exec count' is ignored.
+</li> <li> ramp up time: the time, in seconds, to start the work. It defaults to zero, and is ignored if NBR_OF_PROCESSES&lt;2. It indicates a ramp up period in case you're doing a POC. It is usually useless unless either 'max time' or 'exec count' are specified, or in case you have lots of queries to be taken from a table or a file, so as the processes don't become idle before the period is elapsed. The main program will start a task every 'ramp up time'/NBR_OF_PROCESSES seconds until this ramp up period is finished
+</li> <li> awr snapshots: Y/y/X will take awr snapshots at before and after the load is processed. If this parameter is a number X, it is means that rwpbench will take a snapshot every X seconds.
+</li> <li> awr reports: indicates if you want to print awr reports for the snapshots taken when 'awr snapshots' is set to 'Y/y'. This can have the following values: N means no reports, A means to print an awr report for all instances, plus global report; x,y,... comma-sepatated list of instance ids for which you want the reports to be printed. X should be an instance id, or can be 'g'/'G' to get a global report. Reports will be printed to the current directory, and the names are awr_report_[global|instance_id]_begin-snap_end-snap_trial-nbr.html
+</li> <li> sql: This entry is used to specify the SQL statement to be executed. You have three options here:  <ul>
+<li> Either you put a SELECT statement, which can be on several lines, the last line must contain either the following 2 words 'end sql', ';' or '/'. The statement must begin with a 'SELECT' or a 'WITH'.
+</li> <li> Either you point to an external file like this 'sql=file=[xxx:]name_of_the_file'. So the forked process will read the file indicated to get the SQL statement. Specify the full file name if it is not in the current directory.The file can contain several sql statements, delimited by a ';' or '/'. The '/' must be on a line by itself, while the ';' can also be the last character on the last line of the SQL. If there are several statements, just one output file and log file will be generated, not one for each statement. If you specify the 'xxx:' part, xxx must be a number, and it will tell the system to assign that many processes to execute ALL the SQL statements from the file.
+</li> <li> Either you point to a table like this 'sql=table=[xxx:]table_name'. So the program will read the SQL statement from table 'table_name'. This table must have at a column called 'sql_text CLOB'. SQL_TEXT will contain the sql statement. The 'xxx:' part is optional as in the 'sql=file' case. The difference with the file case described above is that the statement are read with 'ORDER BY ROWID'.
+</li></ul> 
+</li> <li> setup script: What you put here is taken to be a SQL or PL/SQL statement that will be passed to all the forked processes to execute just after connecting to the database. It is usually used to to set some session NLS parameters, or PX related settings. It can also be used to do any preprocessing at the start of the benchmark. It cannot be a simple SELECT, but if it is a PL/SQL, it can contains whatever PL/SQL supports. The code can be on multiple lines, and should end with a line containing just 'end setup', or '/' or ';'. <strong>It cannot be a file, and the maximum length if 1000 bytes.</strong>
+</li> <li> sqlset: if specified, it should point to an <strong>existing</strong> sql tuning set, and all the executed statements will be added to this STS.
+</li> <li> use dbms_sqltune0: if set to Y/y, then rwpbench will use dbms_sqltune0 package to get the sql_id of the statement, otherwise it uses it's ownC code. This can be useful, if for any reason, theC code is wrong. Please note that this code was not tested on anything but an x86 machine, 64 bits.
+</li> <li> bind file: gives the name of a file containing bind values for the sql statement that follows it. The format of the bind file is described below
+</li> <li> bind file separator: a character that will be used as a separator in the bind file, defaults to '|'
+</li> <li> bind results send to host: the name of a host to which to send the results (trial_nbr, query_name, process_id, execution counter, elapsed_time,start_time, returned rows, bind_file_line_nbr) after the execution of a query for each set of bind values. This host must be visible on the network, and you can use the ip address instead of the actual name. For queries not using bind variables, the system will send the same data, but you'll usually have much less rows than when using binds. Attached to this entry are programs written in Python (*.py) that you can use at the receiving end. A note below describes how to use them.
+</li> <li> bind results send to port: port number to use
+</li> <li> bind results to db: by default, the statistics of executing queries with bind values are not inserted into the database, unless you set this parameter to Y/y
+</li> <li> flush results: after how many inserts into response_times the process will commit
+</li> <li> exec stats file: name of the file where the statistics of executing queries with bind variables will be stored.
+</li> <li> flush results: Specify a number X. It tells the system to write the statistics of executing with bind values to the file after X executions.
+</li> <li> stop filename: each forked process, as well as the main routine will check if the file specified here exists, and if it finds it, it will exit gracefully. The checks are done after the execution of any statement, and while fetching rows.
+</li> <li> bind results to db username: lets you specify a different schema and/or database to use for storing theexecution statistics tables. It should have the following format: username/pwd[@dbalias]
+</li> <li> check for quit every: this is used in the rows fetching loop. If not set, the loop will not check to see if we want to stop the POC. If it is set to X, then we will chekc for this every X rows. This is meant to reduce the effect of this check on query execution times.
+</li> <li> rows to spool: gives the number of rows to spool, in case the 'file' parameter is specified. Default is to spool 2&lt;&lt;32-1 rows at most. We may ftech more rows than we spool, depending on 'rows to fetch'.
+</li> <li> user name: allows you to change the user name when connecting to the database.<strong> This take effect for the rest of the file, or until you change it again. If no '</strong><br>bind results to db username'<strong> is specified then the one you specify on this line will be used to insert data into the 'reponse_times' and 'runs_desc' tables. Give the 'user name' the rights to do so if necessary. </strong>
+</li></ul> 
+<p>
+It is to be noted that for each SQL executed, an output file containing the output is created using the name specified by the 'file=' parameter. Each process will 'tag' the file name so that no overwrites occur. The tag is the pid of the process. If no filename is specified, then the data will be just fetched, not printed. A log file will also be generated if you specify a 'log file' entry. The sqlmonitor output will have the same name as the log file, plus a '.html' extension.
+</p><p>
+The statements in sql files can be DMLs or PL/SQL. They must follow the same 'syntax' as sql*plus scripts: PL/SQL blocks must end with a '/' on a line by itself, while other statements can end with a '/' on a line by itself, or by putting a ';' as the end of the last line. PL/SQL blocks are those that begin with either a 'begin' or a 'declare' words.
+</p><p>
+If you specify the 'trial nbr' parameter, then your database must have 2 tables with the following descriptions (if they don't exist, rwpbench will create them in the default tablespace of the user):
+</p><pre>         CREATE TABLE RESPONSE_TIMES
+            (   query_name VARCHAR2(200),
+            process_id number,
+            Inst_id number,
+            trial_nbr number,
+            sql_id   varchar2(20),
+            child_nbr   number,
+            exec_id   number,
+            rows_p number,
+            elapsed_t number,
+            time_st timestamp,
+            IO_CELL_OFFLOAD_ELIGIBLE_BYTES NUMBER,
+            PX_IS_CROSS_INSTANCE  char(1),
+            px_servers_requested  number,
+            px_servers_allocated  number,
+            ELAPSED_TIME             NUMBER,
+            QUEUING_TIME             NUMBER,
+            CPU_TIME                 NUMBER,
+            FETCHES                  NUMBER,
+            BUFFER_GETS              NUMBER,
+            DISK_READS               NUMBER,
+            DIRECT_WRITES            NUMBER,
+            IO_INTERCONNECT_BYTES    NUMBER,
+            PHYSICAL_READ_REQUESTS   NUMBER,
+            PHYSICAL_READ_BYTES      NUMBER,
+            PHYSICAL_WRITE_REQUESTS  NUMBER,
+            PHYSICAL_WRITE_BYTES     NUMBER,
+            APPLICATION_WAIT_TIME NUMBER,
+            CONCURRENCY_WAIT_TIME NUMBER,
+            CLUSTER_WAIT_TIME     NUMBER,
+            USER_IO_WAIT_TIME     NUMBER,
+            PLSQL_EXEC_TIME       NUMBER,
+            JAVA_EXEC_TIME        NUMBER,
+            BIND_FILE_LINE_NBR    NUMBER,
+            SQL_PLAN_HASH_VALUE   NUMBER);
+</pre> The columns from this table mostly come from GV$SQL_MONITOR, except for:
+<p>
+</p><table cellspacing="0" id="table1" cellpadding="0" class="twikiTable" rules="rows" border="1">
+		<tbody><tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<th bgcolor="#687684" valign="top" class="twikiTableCol0 twikiFirstCol"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=0;table=1;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">Column</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol1 twikiLastCol"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=1;table=1;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">Description</font></a> </th>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> query_name </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1 twikiLastCol"> name of the query from the param file, appended by line nbr or rowid, if it comes form a file or a table </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> process_id </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1 twikiLastCol"> pid of the executing process </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> Inst_id </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1 twikiLastCol"> instance to which the main process is connected </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> trial_nbr </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1 twikiLastCol"> Trial number </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> sql_id </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1 twikiLastCol"> sql_id for the query, taken from v$session.prev_sql_id </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> child_nbr </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1 twikiLastCol"> Child number for the cursor, v$session.prev_child_number </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> exec_id </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1 twikiLastCol"> execution id, used to track sqlmon entries, also from v$session.prec_exec_id </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> rows_p </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1 twikiLastCol"> Number of rows fetched </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> elapsed_t </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1 twikiLastCol"> Wall clock time, as measured by the process </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> time_st </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1 twikiLastCol"> start timestamp for the query </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> IO_CELL_OFFLOAD_ELIGIBLE_BYTES </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1 twikiLastCol"> Taken from v$sql </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol twikiLast"> BIND_FILE_LINE_NBR </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1 twikiLastCol twikiLast"> When using bind values, the line in the file that was used in this execution </td>
+		</tr></tbody></table>
+<p>
+Beware also that the ELAPSED_TIME and CPU_TIME are summed over all PX processes used by the query. So, ELAPSED_TIME is more like DB_TIME for this query
+</p><p>
+A second table must also exist, that also helps track runs, it is called RUNS_DESC, and has the following description:
+</p><pre>CREATE TABLE RUNS_DESC ( PID NUMBER, -- pid of the process
+TIME_STAMP_BEG TIMESTAMP (6), -- starting timestamp 
+SID NUMBER, -- sid of the process
+INSTANCE NUMBER, -- instance id
+TIME_STAMP_END TIMESTAMP (6), -- end timestamp
+TRIAL_NBR NUMBER --trial number, as above
+BIND_FILE_NAME VARCHAR2(512), -- the name of the bind file used by this process
+HOST_NAME VARCHAR2(256) -- the name of the machine where this process was running 
+ ) ;The table that is used to save the session statistics, MY_STATS, has the following description:create table my_stats (trial_nbr number
+, pid number -- the pid of the process, same as in runs_desc
+, query_name varchar2(200) -- same as in response_times
+,sid number -- the session id, as in runs_desc
+, statistic# number -- the statistic number taken from v$mystat
+,value number -- the diff of the values after and before executing the statement </pre><pre><pre>);</pre> </pre>
+<p>
+In a benchmark situation, the response_times table can be used to compute and compare execution statistics for each run, which is much easier than having to scan log files. Beware that the query_name column will contain what you put in the 'query name' entry in the parameter file before the SQL=... line. If you use sql=file or sql=table parameters, the starting line number of the SQL in the file, or it's rowid in the table, will be added after this 'query name'. You need to cater for that when retrieving performance data from the table.If the 'query name' parameter is 'qb_name', then you can specify a name for the query in the form on a hint in the SQL itself, as follows:
+</p><pre>select /* qb_name(xxxx)...*/ 
+</pre>
+<p>
+What you put as 'xxxx' in this 'hint' will be used as a query name in the response_times table.
+</p><p>
+rwpbench allows you to specify a debug flag that will tell the processes to print tracing messages to the screen, or to a debug file (if the 'debug file name' parameter is specified). As the name implies, these are for debugging purposes only. You should not enable it in normal benchmark, as the output can be very lengthy.
+</p><p>
+At then end of the run, the program will print a table with the results for each query.
+</p><p>
+If you want to compile the program, the command is:
+</p><p>
+make -B -f proc.mk rwpbench
+</p><p>
+To stop the program prematurely, all you need is to create a file with the name specified in the parameter file. After executing a SQL, the process checks for this file, and stops if it is there. Remember to remove the stop file before restarting the program.
+</p><h2><a name="Required_Privileges"></a> Required Privileges </h2>
+<p>
+rwpbench will connect to the database for several purposes: </p><ul>
+<li> to execute the SQL you submit
+</li> <li> to insert data into the runs_desc and response_times tables
+</li> <li> to do some administrative jobs: take awr snapshots, flush buffer cache or shared pool, ...
+</li></ul> 
+<p>
+You can specify the database user for each of these parts.
+</p><p>
+The administrative jobs will always executed by the user you specify on the command line 'userid=...', so be sure that it has admin privileges (i.e. be able to do 'alter system' to flush buffer cache, .. and also that it can execute dbms_workload_repository functions and procedures.
+</p><p>
+The user that executes the SQL statements can be specified either by the command line parameter 'userid' or by the parfile parameter 'user name'. This user must have the required privileges to execute the SQL in question. It will try also to access the v$session, v$open_cursors, v$sql, v$sql_monitor and gv$sqlmonitor views. If it cannot, then sql execution statistics, as well as sql_id, ... will be missing from response_times.If you ask for pga stats, then you need to give this user privileges to select from v$process also. For printing session statistics,the user will also need select priviliges on v$mystat and v$statname views. Saving the queries to a sqlsetis done using the DBMS_SQLTUNE package, so the user should be able to execute this package if you are using a sqlset. Printing the sqlmonitor report is also done by calling DBMS_SQLTUNE.report_sql_monitor. It is also advisable to give the user execute privileges on the dbms_sqltune_util0 package. This is used to compute the SQL_ID of the SQL statement. If the privilege is NOT granted, rwpbench will fall back on getting the data from v$open_cursor and v$sql. It will fetch the most recent SQL (using v$sql.last_active_time), having the same first line as the statement being executed, and present in v$open_cursor. If more than one sql fits the bill, then the sql_id may be wrong. This can happen if you have 2 very similar SQL statements executed at less than a second apart. If you encounter this issue, then please give execute privileges on dbms_sqltune_util0 to the user, as this will solve it. If the 'save mystats' is set to 'Y', then the user should also have privileges to select from v$mystats view.
+</p><p>
+The operations on runs_desc and response_times can be done by a different user than 'userid' by specifying the 'bind results to db username' parameter in the parfile. This user must have the privileges to SELECT/INSERT and UPDATE on these two tables. It does not need any other privileges.
+</p><h3><a name="Limitations"></a> Limitations </h3>
+<p>
+There are several structures and variables used in rwpbench that have maximum sizes. These restrict a bit what you can do with the tool. Here are the ones you should know about: </p><ul>
+<li> Select statements submitted cannot return more than 1000 columns
+</li> <li> The size of any returned value cannot exceed 500 bytes
+</li> <li> The name of a column, or it's alias, cannot exceed 300 bytes
+</li> <li> The output file name, log file name, bind file name and debug file name cannot be more than 512 bytes (including the path)
+</li> <li> You can use up to 100 machines to execute the benchmark (i.e. number_of_machines&lt;=100)
+</li> <li> You can have up to 5000 different processes (i.e. nbr_of_processes&lt;=5000)
+</li> <li> The maximum size of any sql statement, when read from a file or from a table, is 256k bytes. <strong>When the statement is in the parfile, the limit is much lower: it cannot exceed 900 bytes. So, if your statements are big ones, please put them in a file, and use the 'sql=file...' parameter.</strong>
+</li> <li> The maximum <strong>line </strong>size for sql statements read from a file is 1024 bytes.
+</li></ul> 
+<p>
+If you need to change any of these limitations, you'll need to modify the source code and recompile. All of these limitations are "#define"d near the top of the source code.
+</p><h3><a name="Using_the_Python_routines"></a> Using the Python routines </h3>
+<p>
+As stated above, attached to this note are three python programs, server_file_only.py and server_qt_simple.py and server_qt_sipmle.py3. Please note that the twiki software is configured to add the .txt extension to Python files, so remove thse after you download the files.
+</p><p>
+These can be used as a receiver for the data when sent from rwpbench over the network. This requires that python be installed on the machine where you want to run it. All Linux machine has got this, for Windows machine, you'll have to get it from the python.org. The programs offers several possibilities:
+</p><p> </p><ul>
+<li> server_file_only.py will just print the received data to a file.
+</li> <li> server_qt_simple.py allows for displaying real_time graphs of the received data. the py3 file is the same as py2, but is for python 3 systems.
+</li> <li> Both programs require the '-p' parameter to tell them which port to use. This must be the same as the 'bind results send to port' in the parfile of rwpbench.
+</li> <li> For saving the received data to a file: you use the -o option to specify the output file name. Note that data is appended to this file, so old file content is not lost
+</li> <li> graph the data: for the 'qt_simple' version, you can specify the number of different graphs you want to display, and optionally the list of queries you want to graph (with the -q option). This requires Python version 2.7 to work, along with the numpy and matplotlib modules. If these modules are not installed, the program will tell you so and continue without graphing the data.
+</li></ul> 
+<p>
+To run the program, use the following command: python server.py [-h] -p port_number [-g number_of_graphs -q list_of_queries -o output_file_name ] </p><ul>
+<li> -p: you must specify the port the program will be using. It must be the same as in the parfile of rwpbench
+</li> <li> -o: output file name, used to save the data
+</li> <li> -g: number of graphs to display. These are actually areas on the screens whereline charts of the execution times will be displayed.Queries will be distributed on these areas so as to have more-or-less the same number in each of them.
+</li> <li> -q: list of queries to graph. If absent all queries are displayed.
+</li></ul> 
+<p>
+When started, the program will display the ip address it is listening on, so you can put this into the parfile. This is very handy when you have several ip addresses available on a machine, like a db node on an Exadata system, or when you have a machine that is using DHCP.
+</p><h3><a name="Graphing_the_data_with_SQLDevelo"></a> Graphing the data with SQLDeveloper </h3>
+<p>
+If you have SQLDeveloper 4.x, and you have the response_times table that is updated with the results, you can use the attached sql_dev_graph_report.xml to view a graph of the response times in real-time.
+</p><p>
+To do so, you have to import the xml file in sqldev (in the reports pane, click on the 'user defined reports', then right click and use the 'open report' option). You must also have a connection defined for the database and schema where you have the reponse_times table. After that, you can open the report, choose the connection, and voila. SQLDev allows you to have the report automatically refreshed, so that the graph will be updated regularly.
+</p><p>
+The graph will automatically pick the last trial_nbr. You can edit the SQL in the report to change that, or to make it plot a subset of the queries.
+</p><p>
+</p><h3><a name="Loading_the_executions_statistic"></a> Loading the executions statistics from files </h3>
+ As indicated above, the rwpbench itself, as well as the receiver program can produce files containing the execution statsitics. You can use the following external table description to load this data into the RESPONSE_TIMES table that is used by rwpbench originally. <pre>drop  TABLE response_times_ext;
+CREATE TABLE response_times_ext
+  (trial_nbr      number,
+   query_name        CHAR(250),
+   pid   number,
+ time_st number,
+   elapsed_t number,
+   row_count   number,
+   bind_file_line_nbr number)
+ORGANIZATION EXTERNAL
+  (TYPE ORACLE_LOADER
+   DEFAULT DIRECTORY rwpbench
+   ACCESS PARAMETERS
+     (RECORDS DELIMITED BY NEWLINE
+      FIELDS terminated by ';'
+      (trial_nbr      ,
+   query_name        ,
+   pid   ,execution_time_stamp,
+   elapsed_t,
+   row_count,
+   bind_file_line_nbr)
+     )
+   LOCATION ('tpython.dat')
+  );
+</pre> You'll of course need to adjust the default directory and the file LOCATION to suit your case.
+<p>
+</p><h2><a name="Use_cases"></a> Use cases </h2>
+<h3><a name="A_simple_benchmark"></a> A simple benchmark </h3>
+ We will start with a simple benchmark. We have to run 3 sql statements and get the execution times. We will allow for several runs to be tracked, as we change the configuration between the runs. <pre>trial nbr=N
+file=first_sql.csv
+query name=Q1
+sql=select ....
+end sql
+file=second_sql.csv
+query name=Q2
+sql=select ....
+end sql
+query name=Q3
+file=third_sql.csv
+sql=select ....
+/
+</pre> In this example, putting 'trial nbr=N' will instruct the main program, before doing the forks, to do a <pre>select nvl(max(trial_nbr),0)+1
+from response_times
+</pre> and use the returned value as the new trial nbr to pass to the forked processes. If the table does not exist, it will be created. With this configuration, each time you run the tool, you'll get in the response_times table an entry for each executed statement, with the elapsed time, the returned number of rows, and several statistics taken mainly from the V$SQL/v$SQLMONITOR views.
+<p>
+</p><h3><a name="A_more_complicated_benchmark"></a> A more complicated benchmark </h3>
+ In this case, using the same SQL as the previous one, bu we will run each query 10 times, with a think time between 1 and 3 seconds before each run. Here's the configuration file: <pre>trial nbr=N
+think time min=1
+think time max=3
+exec count=10
+file=first_sql.csv
+query name=Q1
+sql=select ....
+end sql
+file=second_sql.csv
+query name=Q2
+sql=select ....
+end sql
+query name=Q3
+file=third_sql.csv
+sql=select ....
+/
+</pre> The think time before each execution is between 1 and 3 seconds. 
+<h3><a name="Getting_more_info_on_the_benchma"></a> Getting more info on the benchmark </h3>
+ When doing benchmarks, you usually want to get the execution plans, and/or the sqlmonitor of the executed statements. You can use the corresponding entries in the configuration file to get this data, like in the sample below: <pre>print plan stats=y
+sqlmonitor=active
+trial nbr=N
+think time min=1
+think time max=3
+exec count=10
+file=first_sql.csv
+log file=q1_log
+query name=Q1
+sql=select ....
+end sql
+file=second_sql.csv
+query name=Q2
+log file=q2_log
+sql=select ....
+end sql
+</pre> With the above configuration, you'll get 2 files, with names like specified in the 'log file=' entries, for each query. The first log file will contain execution statistics, plus the plan as given by a call to dbms_xplan.display_cursor. The second file will have an 'html' extension, and will contain the sqlmonitor of the corresponding query, if it was monitored.
+<p>
+</p><h3><a name="A_more_complicated_benchmark_AN1"></a> A more complicated benchmark </h3>
+ Let's say you got several files given by the client, each containing one SQL statement. The think time is between 0 and 10 seconds, and you have to run these queries for 30 minutes. All the data returned by the SQL is to be fetched but NOT printed. Here's what the configuration file would look like: <pre>trial nbr=N
+think time min=0
+think time max=10
+max time=1800
+stop filename=/tmp/rwpbench.stop
+query name=Q1
+sql=file=Q1.sql
+query name=Q2
+sql=file=Q2.sql
+</pre> Notice the absence of the 'file=' entries. This will tell the processes to fetch all the rows, without actually writing the results to a file. Each query in the file will run as many times as possible till the total elapsed time is above 1800 seconds (30 minutes). As specified above, if you want to stop the process before this time limit, you can create a file called /tmp/rwpbench.stop, and the processes will stop when they finish executing the current query, without waiting for the 1800 seconds (or any 'exec count', if specified).
+<p>
+</p><h3><a name="A_yet_more_complicated_case"></a> A yet more complicated case </h3>
+ Say you have a big set of sql statements to run, and you have them in 5 files, each containing several independent SELECTs. You have to run the benchmark using 20 concurrent sessions. You can do this as follows: <pre>trial nbr=N
+think time min=1
+think time max=10
+sql=file=4:Q1.sql
+sql=file=4:Q2.sql
+sql=file=4:Q3.sql
+sql=file=4:Q4.sql
+sql=file=4:Q5.sql
+</pre>
+<p>
+to have the 20 processes, you specify nbr_of_processes=20 on the command line. Four processes will execute the same sql file, and they will execute the statements until they finish all of them. Note that if some statements take much longer than the others, you may end up with less than 20 processes running. A better configuration in this case would be to have the statements in a table, as the load would be better distributed: when a process finishes a query it will take the next available one, and so may execute more queries than the other processes.
+</p><h3><a name="Using_DDLs"></a> Using DDLs </h3>
+<p>
+In the MOBI POC, we had a statement that would run much more efficiently if executed on a subset of the data that contains the unique tuples needed. Here is the initial SQL
+</p><pre>SELECT COUNT(DISTINCT C97251_2) AS ANZ 
+FROM TPARPPP 
+CONNECT BY NOCYCLE
+PRIOR C97251_2=C97251_1
+START WITH C97251_1 IN (SELECT DISTINCT C97251_1 FROM TPARPPP WHERE MOD(C97251_1, 317) = 0); </pre>
+<p>
+As can be seen, this query needs the distinct values of C97251_2, in the different hierarchies. So, if we can have the SQL run on an intermediate table containing the distinct (C97251_1, C97251_2) tuples, if will have much less trees to traverse. For the POC, we were allowed to do this rewrite, as long as we include the time to build this subset in the final tally. To run this in rwpbench, we use the following file, 3g_dist.sql, to define the 'script'
+</p><pre>drop table tparppp_d
+/
+create table tparppp_d parallel 12
+as select distinct c97251_1, c97251_2
+from tparppp
+/
+create index tparppp_d_i1 on tparppp_d(c97251_1, c97251_2) nologging parallel 12
+/
+alter index tparppp_d_i1  noparallel
+/
+alter table tparppp_d  noparallel
+/
+select count(distinct c97251_2)
+from tparppp_d
+start with mod(c97251_1,317)=0
+connect by nocycle prior c97251_2=c97251_1
+/
+drop table tparppp_d
+/
+</pre>
+<p>
+and the parameter file contains the following snippet:
+</p><pre>query name=3g_distinct
+sql=file=1:3g_dist.sql
+</pre>
+<p>
+As just one process will execute the sql statements in the above statements taken from file '3g_dist.sql'. We cannot execute this 'query' using multiple concurrent processes (i.e. sql=file=2:3g_dist.sql), as we will probably have an overlap between the CREATE and DROP statements leading to errors.
+</p><p>
+</p><h3><a name="Using_bind_variables"></a> Using bind variables </h3>
+ In this case, we have 2 sql statements, each using several bind variables. The values to be used for these binds are in 2 files: bind1.q1, and binds.q2. The queries are of OLTP type, so they return in short time, say around 100 micro seconds. In this case, we cannot afford to overload the database with the burden of inserting the execution statistics into the 'response_times' table, so we will send these results to a remote machine, where a special program will handle them. Here's a paramfile to do that: <pre>trial nbr=N
+think time min=1
+think time max=2
+bind send results to host=slcg02db01.us.oracle.com
+bind send results to port=1540
+bind file=binds.q1
+query name=q1
+sql=select ... from ... where c1=:a and c2=to_date(:b,'dd/mm/yyyy')
+/
+bind file=binds.q2
+query name=q2
+sql=select ... 
+from A, B
+where a.c1=b.c1 
+and b.c2 between to_date(:a,'dd/mm/yyyy') and to_date(:b,'dd/mm/yyyy') 
+and a.c2 between to_date(:a,'dd/mm/yyyy') and to_date(:b,'dd/mm/yyyy')
+/
+</pre>
+<p>
+Each process will execute the corresponding query as many times as there are lines in the binds.qx files (minus 1 actually). For q1, assuming that c1 contains only integers, the binds.q1 file will look like this:
+</p><pre>c1:integer|c2:char
+1|01/01/2012
+10|02/02/2012
+.....
+</pre> For q2, the 'a' and 'b' variables are both character strings, so the binds.q2 file will look like this: <pre>a:char|b:char
+01/01/2012|02/01/2012
+02/01/2012|03/01/2012
+</pre> The elapsed time as well as the returned rows will be sent to the 'slcg02db01.us.oracle.com' server, port 1540. It is supposed that there's some process listening on this port running on that machine.
+<p>
+</p><h3><a name="Analyzing_Results"></a> Analyzing Results </h3>
+ As described in the first sections, you can use the RESPONSE_TIMES/RUNS_DESC tables to see how each query was executed, ... and especially get performance figures for your system. Here's a sample sql*plus script to just that: <pre>REM query to analyze response times after an rwpbench run
+col query_name for a50
+col trial for a45
+col start_time for a29
+break on trial
+prompt Enter the run number, 0 for all, -1 to get the last one only
+accept run_nbr
+select r.trial_nbr||': '||to_char(bt,'yyyy/mm/dd hh24:mi:ss') ||'-'||to_char(et,'yyyy/mm/dd hh24:mi:ss') trial, query_name,wall_time, round(elapsed_sql,2)  elapsed_sql, execs,px_servers,start_time
+from (select r.trial_nbr,
+query_name, elapsed_t wall_time, elapsed_time/1000000 elapsed_sql, px_servers_allocated px_servers,executions execs,time_st start_time
+from response_times r
+where &amp;run_nbr=0 or (&amp;run_nbr=-1 and r.trial_nbr in (select max(trial_nbr) from runs_desc))
+) r,
+(select min(time_stamp_beg) bt, max(time_stamp_end) et, trial_nbr from runs_desc group by trial_nbr) tss
+where r.trial_nbr=tss.trial_nbr
+order by r.trial_nbr, query_name;
+</pre>
+<p>
+This script will ask for the trial_nbr, and it will give you the last, if you enter -1, all of the trials if you enter 0, otherwise the one you asked for. The following query gives you how many processes were started, how many queries each one executed, and how long it ran:
+</p><pre>col run_span for a40
+col time_stamp_beg for a30
+col time_stamp_end for a30
+break on trial
+prompt Enter the run number, 0 for all, -1 to get the last one only
+accept run_nbr
+select trial_nbr,pid, TIME_STAMP_BEG,  TIME_STAMP_END,TIME_STAMP_end-TIME_STAMP_beg run_span,
+(select count(0) from response_times where trial_nbr=a.trial_nbr and process_id=a.pid and time_st between a.time_stamp_beg-numtodsinterval(1,'second') and time_stamp_end) queries_executed
+from runs_desc a
+where &amp;run_nbr=0 or (&amp;run_nbr=-1 and a.trial_nbr in (select max(trial_nbr) from runs_desc))
+order by 1, 4;
+</pre> Her's an example of the output of these queries, after executing the Hartford benchmark, with the sql statements in a table:
+<p>
+</p><table cellspacing="0" id="table2" cellpadding="0" class="twikiTable" rules="rows" border="1">
+		<tbody><tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<th bgcolor="#687684" valign="top" class="twikiTableCol0 twikiFirstCol"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=0;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">TRIAL</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol1"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=1;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">QUERY_NAME</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol2"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=2;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">WALL_TIME</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol3"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=3;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">ELAPSED_SQL</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol4"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=4;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">EXECS</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol5"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=5;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">PX_SERVERS</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol6 twikiLastCol"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=6;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">START_TIME</font></a> </th>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> 8: 2012/09/20 09:21:37-2012/09/20 09:30:41 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40IAAA </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 71.728793 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 3975.64 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-SEP-12 09.28.05.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40IAAB </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 36.134064 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 1894.09 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.10.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40IAAC </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 41.0431 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 1928.44 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.18.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40IAAD </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 35.444669 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 1175.87 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.22.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40IAAE </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 22.19074 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 1295.61 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.28.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40IAAF </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 37.93609 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 878.1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.29.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40IAAG </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 96.825746 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 4994.44 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.32.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40IAAH </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 26.828091 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 1247.04 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.33.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40IAAI </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 42.924249 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 2046.64 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.36.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40IAAJ </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 31.230185 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 1541.79 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.40.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40JAAA </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 20.208791 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 963.52 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.47.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40JAAB </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 41.926191 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 1106.65 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.51.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40JAAC </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 23.573841 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 761.72 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.53.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40JAAD </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 50.774567 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 2496.83 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.28.58.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40JAAE </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 25.943639 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 1068.35 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.00.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40JAAF </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 12.411644 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 649.5 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.00.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40JAAG </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 25.97225 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 1356.35 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.01.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40LAAA </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 19.492419 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 917.73 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.08.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40LAAB </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 21.289084 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 863.01 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.09.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40LAAC </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 37.338714 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 1915.89 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.11.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40LAAD </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 71.36624 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 3959.69 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.12.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40LAAE </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 19.889838 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 641.52 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.14.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40MAAA </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 22.016396 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 1057.27 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.18.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40NAAA </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 23.572048 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 1292.73 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.18.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40NAAB </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 50.556811 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 2995.06 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.20.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40NAAC </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 68.283043 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 3172.96 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.27.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40OAAA </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 71.692984 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 2709.49 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.28.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40OAAB </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 24.401817 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 1221.77 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.30.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40OAAC </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 33.73282 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> .73 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.33.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40OAAD </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 28.685637 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> .48 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.34.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40PAAA </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 21.547985 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> .48 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.35.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL40PAAB </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 55.980227 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 2366.83 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.29.36.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAA </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 340.487963 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 7266.28 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAB </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 362.589988 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 8744.23 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAC </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 442.471563 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 12391.27 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAD </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 354.833652 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 6867.36 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAE </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 370.615807 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 7537.16 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAF </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 304.331084 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 2586.01 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAG </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 330.881139 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 2615.38 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAH </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 257.525558 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 1562.84 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAI </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 350.242502 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 5413.38 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAJ </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 161.925484 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3"> 0 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol5"> 0 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAK </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 536.310177 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 20038.26 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAL </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 357.641826 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3"> 0 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol5"> 0 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAM </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 477.933587 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 7941.96 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAN </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 417.428459 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 7707.35 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAO </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 414.339786 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 6956.55 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xDAAP </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 369.249152 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 5694.26 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.21.37.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xEAAA </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 180.346707 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 5569.09 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.24.20.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xEAAB </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 79.402059 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 3910.41 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.25.55.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xEAAC </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 147.209308 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 7209.5 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.26.42.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xEAAD </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 83.085254 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 4993.94 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.09.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xEAAE </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 41.799497 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 2151.48 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.16.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xFAAA </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 62.426259 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 3212.22 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.18.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xFAAB </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 197.354173 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 7688.27 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.22.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xGAAA </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 21.554872 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 978.2 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.28.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xGAAB </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 31.401659 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 1641.89 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.33.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xGAAC </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 77.033948 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 3937.95 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.35.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xGAAD </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 35.8746 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 1048.25 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.41.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xGAAE </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> 51.492234 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3"> 2880.53 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.47.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xHAAA </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 38.985732 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 1644.68 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.48.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xHAAB </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2"> .146218 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3"> 0 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol5"> 0 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.51.000000 AM </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> &nbsp; </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> hartford : at rowid=AAL12QAAFAAL4xHAAC </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol2"> 16.543211 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 869.28 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol4"> 1 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5"> 128 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol6 twikiLastCol"> 20-Sep-12 09.27.52.000000 AM </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol twikiLast"> &nbsp; </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1 twikiLast"> hartford : at rowid=AAL12QAAFAAL4xHAAD </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol2 twikiLast"> 27.628926 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol3 twikiLast"> 1266.19 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol4 twikiLast"> 1 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5 twikiLast"> 128 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol6 twikiLastCol twikiLast"> 20-Sep-12 09.27.59.000000 AM </td>
+		</tr></tbody></table>
+<p>
+And for the second query
+</p><table cellspacing="0" id="table3" cellpadding="0" class="twikiTable" rules="rows" border="1">
+		<tbody><tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<th bgcolor="#687684" valign="top" class="twikiTableCol0 twikiFirstCol"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=0;table=3;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">TRIAL_NBR</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol1"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=1;table=3;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">PID</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol2"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=2;table=3;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">TIME_STAMP_BEG</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol3"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=3;table=3;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">TIME_STAMP_END</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol4"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=4;table=3;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">RUN_SPAN</font></a> </th>
+			<th bgcolor="#687684" valign="top" class="twikiTableCol5 twikiLastCol"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=5;table=3;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">QUERIES_EXECUTED</font></a> </th>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> 29642 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.065015 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol3"> 20-SEP-12 09.29.41.693753 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol4"> +000000000 00:08:04.628738 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 4 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> 29645 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.060677 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3"> 20-SEP-12 09.29.43.709228 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol4"> +000000000 00:08:06.648551 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 4 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> 29654 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.062272 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol3"> 20-SEP-12 09.29.49.669893 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol4"> +000000000 00:08:12.607621 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 3 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> 29643 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.060349 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3"> 20-SEP-12 09.29.50.893690 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol4"> +000000000 00:08:13.833341 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 4 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> 29652 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.059499 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol3"> 20-SEP-12 09.29.55.926034 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol4"> +000000000 00:08:18.866535 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 5 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> 29655 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.059499 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3"> 20-SEP-12 09.29.58.774759 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol4"> +000000000 00:08:21.715260 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 4 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> 29660 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.071843 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol3"> 20-SEP-12 09.30.04.827439 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol4"> +000000000 00:08:27.755596 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 7 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> 29644 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.066649 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3"> 20-SEP-12 09.30.07.851511 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol4"> +000000000 00:08:30.784862 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 8 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> 29657 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.070221 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol3"> 20-SEP-12 09.30.10.789239 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol4"> +000000000 00:08:33.719018 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 2 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> 29647 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.069826 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3"> 20-SEP-12 09.30.12.137714 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol4"> +000000000 00:08:35.067888 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 3 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> 29646 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.069826 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol3"> 20-SEP-12 09.30.25.373111 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol4"> +000000000 00:08:48.303285 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 4 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> 29649 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.065762 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3"> 20-SEP-12 09.30.33.936085 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol4"> +000000000 00:08:56.870323 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 2 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> 29663 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.074167 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol3"> 20-SEP-12 09.30.34.616084 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol4"> +000000000 00:08:57.541917 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 1 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1"> 29651 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.060934 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3"> 20-SEP-12 09.30.36.952525 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol4"> +000000000 00:08:59.891591 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 5 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol0 twikiFirstCol"> 8 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol1"> 29659 </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol2"> 20-SEP-12 09.21.37.063200 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol3"> 20-SEP-12 09.30.40.820039 AM </td>
+			<td bgcolor="#ffffff" valign="top" class="twikiTableCol4"> +000000000 00:09:03.756839 </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol5 twikiLastCol"> 3 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol0 twikiFirstCol twikiLast"> 8 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol1 twikiLast"> 29648 </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol2 twikiLast"> 20-SEP-12 09.21.37.073169 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol3 twikiLast"> 20-SEP-12 09.30.41.472353 AM </td>
+			<td bgcolor="#edf4f9" valign="top" class="twikiTableCol4 twikiLast"> +000000000 00:09:04.399184 </td>
+			<td bgcolor="#edf4f9" align="right" valign="top" class="twikiTableCol5 twikiLastCol twikiLast"> 5 </td>
+		</tr></tbody></table></div><!-- /patternTopic-->
+<p>
+</p><p>
+</p><div class="twikiAttachments">
+<div class="twistyPlugin twikiMakeVisibleInline">
+ <span id="topicattachmentslistshow" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyInited twistyHidden"><a href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench#"><img src="./RWPBench_RealWorld_TWiki_files/toggleopen.gif" border="0" alt=""><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span> <span id="topicattachmentslisthide" class="twistyRememberSetting twistyTrigger twikiUnvisited twistyInited"><a href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench#"><img src="./RWPBench_RealWorld_TWiki_files/toggleclose.gif" border="0" alt=""><span class="twikiLinkLabel twikiUnvisited">Attachments</span></a> </span>  </div><!--/twistyPlugin twikiMakeVisibleInline--> <div class="twistyPlugin"><div id="topicattachmentslisttoggle" class="twistyRememberSetting twistyContent twistyInited">
+<table summary="Topic attachments" cellspacing="0" id="twikiAttachmentsTable" cellpadding="0" class="twikiTable" rules="rows" border="1"><caption>Topic attachments</caption>
+		<tbody><tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<th bgcolor="#ffffff" valign="middle" class="twikiTableCol0 twikiFirstCol"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=0;table=4;up=0#sorted_table" title="Sort by this column"><font color="#0066cc">I</font></a> </th>
+			<th bgcolor="#ffffff" valign="middle" class="twikiTableCol1"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=1;table=4;up=0#sorted_table" title="Sort by this column"><font color="#0066cc">Attachment</font></a> </th>
+			<th bgcolor="#ffffff" valign="middle" class="twikiTableCol2"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=2;table=4;up=0#sorted_table" title="Sort by this column"><font color="#0066cc">Action</font></a> </th>
+			<th bgcolor="#ffffff" valign="middle" class="twikiTableCol3"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=3;table=4;up=0#sorted_table" title="Sort by this column"><font color="#0066cc">Size</font></a> </th>
+			<th bgcolor="#ffffff" valign="middle" class="twikiTableCol4"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=4;table=4;up=0#sorted_table" title="Sort by this column"><font color="#0066cc">Date</font></a> </th>
+			<th bgcolor="#ffffff" valign="middle" class="twikiTableCol5"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=5;table=4;up=0#sorted_table" title="Sort by this column"><font color="#0066cc">Who</font></a> </th>
+			<th bgcolor="#ffffff" valign="middle" class="twikiTableCol6 twikiLastCol"> <a rel="nofollow" href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/RWPBench?cover=print;skin=clean.nat%2Cpattern;sortcol=6;table=4;up=0#sorted_table" title="Sort by this column"><font color="#0066cc">Comment</font></a> </th>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" align="center" valign="top" class="twikiTableCol0 twikiFirstCol"> <img width="16" alt="else" align="top" src="./RWPBench_RealWorld_TWiki_files/else.gif" height="16" border="0"><span class="twikiHidden">mk</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol1"> <a href="http://realworld.us.oracle.com/twiki/pub/RealWorld/RWPBench/proc.mk">proc.mk</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol2"> <a href="http://realworld.us.oracle.com/twiki/bin/attach/RealWorld/RWPBench?filename=proc.mk;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 3.4&nbsp;K </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol4"> <span class="twikiNoBreak">19 Mar 2014 - 12:25</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol5"> <a href="http://realworld.us.oracle.com/twiki/bin/view/Main/GhassanSalem" class="twikiLink">GhassanSalem</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol6 twikiLastCol"> Make file for Linux (tested with an 11.2 and 12.1, on Exadata) </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" align="center" valign="top" class="twikiTableCol0 twikiFirstCol"> <img width="16" alt="else" align="top" src="./RWPBench_RealWorld_TWiki_files/else.gif" height="16" border="0"><span class="twikiHidden">EXT</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol1"> <a href="http://realworld.us.oracle.com/twiki/pub/RealWorld/RWPBench/rwpbench">rwpbench</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol2"> <a href="http://realworld.us.oracle.com/twiki/bin/attach/RealWorld/RWPBench?filename=rwpbench;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 200.8&nbsp;K </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol4"> <span class="twikiNoBreak">23 Jun 2014 - 15:46</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol5"> <a href="http://realworld.us.oracle.com/twiki/bin/view/Main/GhassanSalem" class="twikiLink">GhassanSalem</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol6 twikiLastCol"> Executable file for Linux x64 (11.2.0.4, oel6) </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" align="center" valign="top" class="twikiTableCol0 twikiFirstCol"> <img width="16" alt="else" align="top" src="./RWPBench_RealWorld_TWiki_files/else.gif" height="16" border="0"><span class="twikiHidden">pc</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol1"> <a href="http://realworld.us.oracle.com/twiki/pub/RealWorld/RWPBench/rwpbench.pc">rwpbench.pc</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol2"> <a href="http://realworld.us.oracle.com/twiki/bin/attach/RealWorld/RWPBench?filename=rwpbench.pc;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 156.1&nbsp;K </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol4"> <span class="twikiNoBreak">23 Jun 2014 - 15:40</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol5"> <a href="http://realworld.us.oracle.com/twiki/bin/view/Main/GhassanSalem" class="twikiLink">GhassanSalem</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol6 twikiLastCol"> Source code </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" align="center" valign="top" class="twikiTableCol0 twikiFirstCol"> <img width="16" alt="else" align="top" src="./RWPBench_RealWorld_TWiki_files/else.gif" height="16" border="0"><span class="twikiHidden">EXT</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol1"> <a href="http://realworld.us.oracle.com/twiki/pub/RealWorld/RWPBench/rwpbench_12c_oel">rwpbench_12c_oel</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol2"> <a href="http://realworld.us.oracle.com/twiki/bin/attach/RealWorld/RWPBench?filename=rwpbench_12c_oel;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 200.9&nbsp;K </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol4"> <span class="twikiNoBreak">28 Apr 2014 - 13:05</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol5"> <a href="http://realworld.us.oracle.com/twiki/bin/view/Main/GhassanSalem" class="twikiLink">GhassanSalem</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol6 twikiLastCol"> Executable file for Linux x64 (12.1.0.2, oel6) </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" align="center" valign="top" class="twikiTableCol0 twikiFirstCol"> <img width="16" alt="txt" align="top" src="./RWPBench_RealWorld_TWiki_files/txt.gif" height="16" border="0"><span class="twikiHidden">txt</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol1"> <a href="http://realworld.us.oracle.com/twiki/pub/RealWorld/RWPBench/server_file_only.py.txt">server_file_only.py.txt</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol2"> <a href="http://realworld.us.oracle.com/twiki/bin/attach/RealWorld/RWPBench?filename=server_file_only.py.txt;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 5.6&nbsp;K </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol4"> <span class="twikiNoBreak">05 Nov 2013 - 13:46</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol5"> <a href="http://realworld.us.oracle.com/twiki/bin/view/Main/GhassanSalem" class="twikiLink">GhassanSalem</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol6 twikiLastCol"> Python program to be used as a remote listener to put execution stats in a file </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" align="center" valign="top" class="twikiTableCol0 twikiFirstCol"> <img width="16" alt="txt" align="top" src="./RWPBench_RealWorld_TWiki_files/txt.gif" height="16" border="0"><span class="twikiHidden">txt</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol1"> <a href="http://realworld.us.oracle.com/twiki/pub/RealWorld/RWPBench/server_qt_simple.py.txt">server_qt_simple.py.txt</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol2"> <a href="http://realworld.us.oracle.com/twiki/bin/attach/RealWorld/RWPBench?filename=server_qt_simple.py.txt;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 20.5&nbsp;K </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol4"> <span class="twikiNoBreak">05 Nov 2013 - 13:46</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol5"> <a href="http://realworld.us.oracle.com/twiki/bin/view/Main/GhassanSalem" class="twikiLink">GhassanSalem</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol6 twikiLastCol"> Python program to be used as a remote listener to put execution stats in file or graph them. </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" align="center" valign="top" class="twikiTableCol0 twikiFirstCol"> <img width="16" alt="else" align="top" src="./RWPBench_RealWorld_TWiki_files/else.gif" height="16" border="0"><span class="twikiHidden">py3</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol1"> <a href="http://realworld.us.oracle.com/twiki/pub/RealWorld/RWPBench/server_qt_simple.py3">server_qt_simple.py3</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol2"> <a href="http://realworld.us.oracle.com/twiki/bin/attach/RealWorld/RWPBench?filename=server_qt_simple.py3;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3"> 29.5&nbsp;K </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol4"> <span class="twikiNoBreak">05 Nov 2013 - 13:48</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol5"> <a href="http://realworld.us.oracle.com/twiki/bin/view/Main/GhassanSalem" class="twikiLink">GhassanSalem</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol6 twikiLastCol"> Python3 version of server_qt_simple.py </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td bgcolor="#ffffff" align="center" valign="top" class="twikiTableCol0 twikiFirstCol twikiLast"> <img width="16" alt="xml" align="top" src="./RWPBench_RealWorld_TWiki_files/xml.gif" height="16" border="0"><span class="twikiHidden">xml</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol1 twikiLast"> <a href="http://realworld.us.oracle.com/twiki/pub/RealWorld/RWPBench/sql_dev_graph_report.xml">sql_dev_graph_report.xml</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol2 twikiLast"> <a href="http://realworld.us.oracle.com/twiki/bin/attach/RealWorld/RWPBench?filename=sql_dev_graph_report.xml;revInfo=1" title="change, update, previous revisions, move, delete..." rel="nofollow">manage</a> </td>
+			<td bgcolor="#ffffff" align="right" valign="top" class="twikiTableCol3 twikiLast"> 3.9&nbsp;K </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol4 twikiLast"> <span class="twikiNoBreak">05 Nov 2013 - 14:11</span> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol5 twikiLast"> <a href="http://realworld.us.oracle.com/twiki/bin/view/Main/GhassanSalem" class="twikiLink">GhassanSalem</a> </td>
+			<td bgcolor="#ffffff" align="left" valign="top" class="twikiTableCol6 twikiLastCol twikiLast"> SQLDev report to graph the execution statistics data (requires sqldev 4.0) </td>
+		</tr></tbody></table>
+</div></div>
+<!--/twistyPlugin--></div><!--//twikiAttachments--></div><!-- /patternContent-->
+<hr>
+This topic: RealWorld<span class="twikiSeparator">&nbsp;&gt;&nbsp;</span><a href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/CustomerBenchmarks" class="twikiLink">CustomerBenchmarks</a> &gt; <a href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/WebHome" class="twikiCurrentWebHomeLink twikiLink">WebHome</a> &gt; <a href="http://realworld.us.oracle.com/twiki/bin/view/RealWorld/PerfTools" class="twikiLink">PerfTools</a><span class="twikiSeparator">&nbsp;&gt;&nbsp;</span>RWPBench <br> 
+Topic revision: r36 - 23 Jun 2014 - 15:46:37 - <a href="http://realworld.us.oracle.com/twiki/bin/view/Main/GhassanSalem" class="twikiLink">GhassanSalem</a>
+</div><!-- /patternMainContents-->
+</div><!-- /patternMain-->
+</div><!-- /patternFloatWrap-->
+<div class="clear">&nbsp;</div>
+</div><!-- /patternOuter--><div id="patternBottomBar"><div id="patternBottomBarContents"><div id="patternWebBottomBar"><span class="twikiRight"> <a href="http://twiki.org/"><img src="./RWPBench_RealWorld_TWiki_files/T-badge-88x31.gif" alt="This site is powered by the TWiki collaboration platform" width="88" height="31" title="This site is powered by the TWiki collaboration platform" border="0"></a></span>Copyright &amp;© by the contributing authors. All material on this collaboration platform is the property of the contributing authors. <br> Ideas, requests, problems regarding TWiki? <a href="mailto:john.ciminski@oracle.com?subject=TWiki%20Feedback%20on%20RealWorld.RWPBench">Send feedback</a> </div><!--/patternWebBottomBar--></div><!-- /patternBottomBarContents--></div><!-- /patternBottomBar-->
+</div><!-- /patternPage-->
+</div><!-- /patternPageShadow-->
+</div><!-- /patternScreen-->
+</body></html>

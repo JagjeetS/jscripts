@@ -1,0 +1,223 @@
+import socket , re
+
+import random, sys, getopt
+import collections
+import gobject
+import Queue
+import threading
+import thread
+import datetime
+import select
+
+
+
+def get_local_ip():
+	def udp_listening_server():
+		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+		s.bind(('<broadcast>', 8888))
+		s.setblocking(0)
+		while True:
+			result = select.select([s],[],[])
+			msg, address = result[0][0].recvfrom(1024)
+			msg = str(msg).encode('UTF-8')
+			if msg == 'What is my LAN IP address?':
+				break
+		queue.put(address)
+
+	queue = Queue.Queue()
+	thread = threading.Thread(target=udp_listening_server)
+	thread.queue = queue
+	thread.start()
+	s2 = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+	s2.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+	waiting = True
+        while waiting:
+        	s2.sendto(str('What is my LAN IP address?').encode( 'UTF-8'), ('<broadcast>', 8888))
+        	try:
+			address = queue.get(False)
+		except Queue.Empty:
+			pass
+		else:
+			waiting = False
+	print address[0]
+	return address[0]
+
+def get_args(argv):
+	try:
+	      opts, args = getopt.getopt(argv,"b:p:o:",["port=","output="])
+	except getopt.GetoptError:
+	      print 'server.py -p port_number -o output_file_name '
+	      sys.exit(2)
+	single_window=0
+	outfile=''
+	queries=''
+	polynomialfit=0
+	queries_list=[]
+	summed=0
+	bport=0
+	if len(opts)<1:
+	      print 'server.py -b port_number -p port_number -o output_file_name'
+	      sys.exit(2)
+	for opt, arg in opts:
+	      if opt in ("-p", "--port"):
+		 port = arg
+	      elif opt in ("-b", "--browser"):
+		 bport = arg
+	      elif opt in ("-o", "--output"):
+		  outfile=arg
+	if outfile=='':
+	      print 'Please specify The output file name (-o option)'
+	      sys.exit(2)
+	return int(port), outfile, int(bport)
+
+class handler(threading.Thread):
+	def __init__(self, clientsock_p, addr_p, outfile_p, socket_o):
+		self.outfile=outfile_p
+		self.clientsock=clientsock_p
+		self.addr=addr_p
+		self.clientsock.settimeout(1)
+		self._stop = threading.Event()
+		self.socket_o=socket_o
+		threading.Thread.__init__(self)
+	def stop(self):
+		self._stop.set()
+
+	def stopped(self):
+		return self._stop.isSet()
+
+	def run(self):
+		old_data=''
+		oldquery=''
+		BUFSIZ=1250
+		listen=1
+		empty_list=[]
+		slist=[]
+		slist.append(self.socket_o)
+		print "listening "
+		# message field description
+		# f1: trial nbr
+		# f2: query name
+		# f3: process pid
+		# f4: execution timestamp
+		# f5: execution time
+		# f6: row count
+		# f7: line in bind file
+		if self.socket_o>0:
+			browser_connected=0
+		else:
+			browser_connected=1
+		d=datetime.datetime.now()
+		while listen:
+			try:
+				data = old_data+self.clientsock.recv(BUFSIZ)
+				if not data:
+				    break
+				msg =data.split('|')
+				if browser_connected==0:
+					try:
+						#print 'checking if we can write to browser socket'
+						r_to_r, r_to_w, in_error=select.select(empty_list,slist,empty_list,0)
+						if len(r_to_w)<0:
+							browser_connected=1
+							print 'connection to browser is closed'
+					except socket.timeout:
+						if len(r_to_w)<0:
+							browser_connected=1
+							print 'connection to browser is closed'
+
+				#print "got message "+data
+				for packet in msg:
+					fields=packet.split(';')
+					if len(fields)!=7:
+						old_data=packet
+					else :
+						self.outfile.write(packet+'\n')
+						totalsent=0
+						old_data=''
+						while browser_connected==0 and totalsent<len(packet):
+							sent=self.socket_o.send(packet[totalsent:])
+							if sent==0:
+								browser_connected=0
+							print 'sent ',sent,' bytes to browser'
+							totalsent+=sent
+			except socket.timeout:
+				if self.stopped():
+					listen=0
+
+		self.clientsock.close()
+
+class Listener(threading.Thread):
+	def __init__(self,port_p, host_p, outfile_p, bport_p):
+		self.port=port_p
+		self.HOST=host_p
+		self.outfilename=outfile_p
+		self.threads_h=[]
+		self.ADDR = (self.HOST, self.port)
+		self.outfile=''
+		self.outfile=open(self.outfilename,"a")
+		self.serversock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+		self.serversock.settimeout(1)
+		self.serversock.bind(self.ADDR)
+		self.serversock.listen(2)
+		self.bport=bport_p
+		if self.bport>0:
+			self.ADDR_o = (self.HOST, bport_p)
+			self.serversock_o = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			self.serversock_o.settimeout(120)
+			self.serversock_o.bind(self.ADDR_o)
+			self.serversock_o.listen(2)
+
+		self._stop = threading.Event()
+		threading.Thread.__init__(self)
+	def stop(self):
+		self._stop.set()
+
+	def stopped(self):
+		return self._stop.isSet()
+
+	def run(self):
+		i=0
+		listen=1
+		self.threads_h=[]
+		browser_socket=0
+		print 'Before starting rwpbench, please connect the display program to port',self.bport,' ... waiting for 2 minutes'
+		try:
+			browser_socket, browseradr=self.serversock_o.accept()
+			print 'ok, graphing app now connected'
+		except socket.timeout:
+			print 'Graphing app did not connect, quitting'
+			listen=0
+		print 'waiting for connection...'
+		while listen:
+			try:
+
+				clientsock, addr = self.serversock.accept()
+				print '...connected from:', addr
+				self.threads_h.append(handler(clientsock, addr,  self.outfile, browser_socket))
+				self.threads_h[-1].start()
+				i+=1
+			except socket.timeout:
+				for j in range(len(self.threads_h)):
+						try:
+							t=self.threads_h[j]
+							if t.isAlive():
+								i=1
+							else:
+								self.threads_h.pop(j)
+						except IndexError:
+							i=len(self.threads_h)
+				if self.stopped() or (i>0 and len(self.threads_h)==0):
+					listen=0
+					print 'no more connections, quitting'
+		self.outfile.close()
+		self.serversock.close()
+
+
+
+if __name__=='__main__':
+
+	HOST = get_local_ip()
+	port,outfilename,bport=get_args(sys.argv[1:])
+	thread_listener=Listener(port,HOST,outfilename,bport )
+	thread_listener.start()
+
