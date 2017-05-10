@@ -51,6 +51,8 @@ begin
     end loop;
     execute_immediate( 'alter session set nls_date_format=
                            ''dd-MON-yy'' ');
+ dbms_sql.close_cursor(l_thecursor);
+
 exception
     when others then
         execute_immediate( 'alter session set
