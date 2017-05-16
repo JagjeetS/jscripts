@@ -1,4 +1,5 @@
 export SQLPATH=$PWD
+export ORACLE_PATH=$PWD
 export EDITOR=vi
 export NLS_DATE_FORMAT='DD-MON-YYYY HH24:MI:SS'
 
