@@ -1,2 +1,2 @@
-# Demo Project Files
+# Scripts
 This is a simple readme file
